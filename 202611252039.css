@@ -1,0 +1,77 @@
+:root{
+  --bg:#0e1116; --bg-soft:#151a22; --line:#242c38;
+  --fg:#e9edf2; --fg-dim:#98a4b3; --accent:#6aa6ff;
+  --max:44rem;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0 auto; max-width:var(--max); padding:0 1.25rem 6rem;
+  background:var(--bg); color:var(--fg);
+  font:17px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* 顶部 */
+.site{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--line);margin-bottom:3rem;flex-wrap:wrap;gap:.5rem}
+.logo{color:var(--fg);font-weight:700;font-size:1.05rem}
+.site nav a{color:var(--fg-dim);margin-left:1.15rem;font-size:.92rem}
+.site nav a:hover{color:var(--fg);text-decoration:none}
+
+/* 首屏 */
+.hero{padding-bottom:3rem;border-bottom:1px solid var(--line);margin-bottom:3rem}
+.hero h1{font-size:1.9rem;line-height:1.35;margin:0 0 .75rem;letter-spacing:-.01em}
+.hero .lede{color:var(--fg-dim);margin:0 0 1.25rem;font-size:.95rem}
+.hero p{margin:0;color:var(--fg)}
+
+/* 区块标题 */
+h2{font-size:1.15rem;margin:0 0 1.5rem;padding-left:.6rem;border-left:3px solid var(--accent);line-height:1.4}
+
+/* 作品卡片 */
+.card{display:block;padding:1.35rem 0;border-top:1px solid var(--line);color:inherit}
+.card:last-of-type{border-bottom:1px solid var(--line)}
+.card:hover{text-decoration:none}
+.card:hover h3{color:var(--accent)}
+.card h3{margin:.4rem 0 .5rem;font-size:1.12rem;line-height:1.5;transition:color .15s}
+.card p{margin:0 0 .5rem;color:var(--fg-dim);font-size:.94rem}
+.card .meta{margin:0;font-size:.82rem;color:#6b7787;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.06em;color:var(--accent);border:1px solid rgba(106,166,255,.35);border-radius:3px;padding:.1rem .45rem}
+
+/* 章节 */
+section{margin-bottom:3.5rem}
+
+/* 关于 */
+.about dl{display:grid;grid-template-columns:5.5rem 1fr;gap:.6rem 1rem;margin:0;font-size:.95rem}
+.about dt{color:var(--fg-dim)}
+.about dd{margin:0}
+
+/* 正文 */
+.article h1{font-size:1.75rem;line-height:1.4;margin:0 0 .75rem}
+.article .meta{color:var(--fg-dim);font-size:.85rem;margin:0 0 2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.article h2{font-size:1.25rem;margin:3rem 0 1rem;border-left:none;padding-left:0}
+.article h3{font-size:1.02rem;margin:2rem 0 .75rem;color:var(--fg)}
+.article p{margin:0 0 1.15rem}
+.article ul,.article ol{padding-left:1.3rem;margin:0 0 1.15rem}
+.article li{margin-bottom:.5rem}
+.article blockquote{margin:1.75rem 0;padding:.15rem 0 .15rem 1.15rem;border-left:2px solid var(--accent);color:var(--fg-dim)}
+.article blockquote p:last-child{margin-bottom:0}
+.article table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.9rem;display:block;overflow-x:auto}
+.article th,.article td{border:1px solid var(--line);padding:.55rem .7rem;text-align:left;vertical-align:top}
+.article th{background:var(--bg-soft);font-weight:600}
+.article code{background:var(--bg-soft);padding:.1rem .35rem;border-radius:3px;font-size:.88em}
+.article hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);padding-top:1.5rem;color:var(--fg-dim);font-size:.85rem}
+footer a{color:var(--fg-dim)}
+footer a:hover{color:var(--fg)}
+
+/* 手机 */
+@media (max-width:520px){
+  body{font-size:16px;padding-bottom:4rem}
+  .hero h1{font-size:1.55rem}
+  .about dl{grid-template-columns:1fr;gap:.15rem}
+  .about dt{margin-top:.6rem}
+}
